@@ -15,8 +15,6 @@ for dirpath, dirnames, filenames in os.walk("."):
     for filename in [f for f in filenames if f.endswith(".png")]:
         book_cover = (os.path.join(dirpath, filename))
 
-#print list_of_images
-#list_of_images = list_of_images[1:]
 def split(image):
     fname = (image.split('/')[4]).split('.')[0]
     year = fname[:4]
@@ -42,7 +40,6 @@ def createPDF(list_of_images):
             pdf.add_page()
             pdf.set_font("Courier", size=22)
             pdf.cell(200,15, txt=calendar[month]+', '+year, ln=1, align="C")
-            #pdf.cell(200,10, txt=calendar[month], ln=1, align="C")
             pdf.set_font("courier",size=8)
         pdf.cell(200,5, txt=date, ln=1, align="L")
         pdf.image(image, x = None, y = None, w = 190, h = 0, type = 'gif', link = '')
