@@ -5,5 +5,5 @@ idna==2.5
 Jinja2==2.9.6
 MarkupSafe==1.0
 pypub==1.4
-requests==2.18.1
+requests==2.20.0
 urllib3==1.21.1
