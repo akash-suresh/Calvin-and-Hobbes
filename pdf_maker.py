@@ -13,6 +13,7 @@ for dirpath, dirnames, filenames in os.walk("."):
 
 for dirpath, dirnames, filenames in os.walk("."):
     for filename in [f for f in filenames if f.endswith(".png")]:
+        print filename
         book_cover = (os.path.join(dirpath, filename))
 
 def split(image):
@@ -25,9 +26,9 @@ def split(image):
 
 def createPDF(list_of_images):
     calendar = ['0','January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    pdf = FPDF()
+    pdf = FPDF(orientation='L')
     pdf.add_page()
-    pdf.image(book_cover, x = None, y = None, w = 190, h = 0, type = 'png', link = '')
+    pdf.image(book_cover, x = None, y = None, w = 250, h = 0, type = 'png', link = '')
     pdf.add_page()
     date, day, old_month, year = split(list_of_images[0])
     pdf.set_font("Courier", size=22)
@@ -42,8 +43,10 @@ def createPDF(list_of_images):
             pdf.cell(200,15, txt=calendar[month]+', '+year, ln=1, align="C")
             pdf.set_font("courier",size=8)
         pdf.cell(200,5, txt=date, ln=1, align="L")
-        pdf.image(image, x = None, y = None, w = 190, h = 0, type = 'gif', link = '')
+        pdf.image(image, x = None, y = None, w = 250, h = 0, type = 'gif', link = '')
         old_month= month
+        break;
     pdf.output("Calvin and Hobbes.pdf", "F")
+print list_of_images[0]
 
 createPDF(list_of_images)
