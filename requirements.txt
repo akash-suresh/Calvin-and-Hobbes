@@ -6,4 +6,4 @@ Jinja2==2.9.6
 MarkupSafe==1.0
 pypub==1.4
 requests==2.18.1
-urllib3==1.21.1
+urllib3==1.24.2
