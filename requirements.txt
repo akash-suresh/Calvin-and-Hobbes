@@ -2,8 +2,8 @@ beautifulsoup4==4.6.0
 certifi==2017.4.17
 chardet==3.0.4
 idna==2.5
-Jinja2==2.9.6
+Jinja2>=2.10.1
 MarkupSafe==1.0
 pypub==1.4
-requests==2.18.1
-urllib3==1.21.1
+requests>=2.20.0
+urllib3>=1.24.2

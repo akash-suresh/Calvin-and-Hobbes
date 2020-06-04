@@ -1,11 +1,13 @@
 # CalvinHobbes
-Script to compile the comics
+Script to compile the comics into PDF
 
 http://marcel-oehler.marcellosendos.ch/comics/ch/
 
 The original source of the images for my script. My script uses these images to compile a pdf of the comics for easy reading and portability. 
 
 This is a python script which uses FPDF to compile the pdf.
+
+![Calvin and Hobbes](Book1.png)
 
 Steps to follow -
 
