@@ -7,7 +7,7 @@ The original source of the images for my script. My script uses these images to 
 
 This is a python script which uses FPDF to compile the pdf.
 
-![Calvin and Hobbes](Book1.png)
+[<img src="Book1.png" width="600"/>](Book1.png)
 
 Steps to follow -
 
